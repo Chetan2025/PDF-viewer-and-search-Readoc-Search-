@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">viewer</string>
+    <string name="pdf_preview">PDF preview</string>
+    <string name="no_pdf_opened">PDF open karne ke liye file manager se PDF choose karo.</string>
+    <string name="pdf_opened">Opened: %1$s</string>
+    <string name="pdf_open_failed">PDF open nahi ho paaya: %1$s</string>
+    <string name="default_pdf_title">Default PDF app set karo</string>
+    <string name="default_pdf_message">Jab tak ye app PDF ke liye default nahi set hoti, app tumhe settings par le jayegi. Wapas aake "Maine set kar diya" dabao.</string>
+    <string name="default_pdf_set_now">Set now</string>
+    <string name="default_pdf_i_set">Maine set kar diya</string>
+    <string name="default_pdf_exit">Exit app</string>
+    <string name="default_pdf_verified">Great, ab ye app PDF default set ho gayi.</string>
+    <string name="default_pdf_not_verified">Abhi default set nahi hua. Settings me viewer ko PDF ke liye allow karo.</string>
+    <string name="default_pdf_settings_unavailable">Is device par default settings screen available nahi hai.</string>
+</resources>

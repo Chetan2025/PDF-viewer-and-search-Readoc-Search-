@@ -1,71 +1,59 @@
-# Viewer (Android PDF Opener)
+# Viewer
 
-A lightweight Android app that opens PDF files sent via `ACTION_VIEW` intent and renders the first page as a preview.
+Viewer is a lightweight Android PDF viewer built with Kotlin and AndroidX. It can open PDF files from the file picker, respond to PDF `VIEW` intents, and guide the user to set the app as the default PDF handler.
 
-This project is built with Kotlin and Android Gradle Plugin using SDK 36.
+## Preview
+
+![Viewer app preview](assits/pdf_viewer_01.png)
 
 ## Features
 
-- Open PDF from file manager or any app that shares a PDF intent.
-- Render first page with `PdfRenderer`.
-- Show clear status messages for success and failure.
-- Guide user to set this app as default PDF opener.
+- Open PDF files from other apps or from a file manager.
+- Render the first page of the selected PDF.
+- Show clear status messages when no PDF is opened or when loading fails.
+- Help users set Viewer as the default app for PDF links and files.
 
 ## Screenshots
 
-> Images are loaded from the existing `assits` folder.
-
-![Viewer Screenshot 1](assits/pdf_viewer_01.png)
-![Viewer Screenshot 2](assits/pdf_viewer_02.png)
-![Viewer Screenshot 3](assits/pdf_viewer_03.png)
-![Viewer Screenshot 4](assits/pdf_viewer_04.png)
-![Viewer Screenshot 5](assits/pdf_viewer_05.png)
-
-## Project Structure
-
-- `app/` - Android application module
-- `assits/` - screenshots and media used in README
-- `gradle/` - Gradle wrapper and versions catalog
+| Preview | Preview | Preview |
+| --- | --- | --- |
+| ![Screenshot 1](assits/pdf_viewer_01.png) | ![Screenshot 2](assits/pdf_viewer_02.png) | ![Screenshot 3](assits/pdf_viewer_03.png) |
+| ![Screenshot 4](assits/pdf_viewer_04.png) | ![Screenshot 5](assits/pdf_viewer_05.png) |  |
 
 ## Requirements
 
-- Android Studio (latest stable recommended)
-- JDK 11
-- Android SDK with API 36
+- Android Studio Hedgehog or newer
+- Android SDK 36
+- Minimum Android version: 23
 
-## Run Locally
+## Getting Started
 
-1. Clone repository:
-   ```bash
-   git clone <your-repo-url>
-   cd PDF-viewer-and-search-Readoc-Search-
-   ```
-2. Open project in Android Studio.
-3. Sync Gradle.
-4. Run app on emulator or physical device.
+1. Clone the repository.
+2. Open the project in Android Studio.
+3. Let Gradle sync finish.
+4. Run the `app` module on an emulator or a physical device.
 
-## Build APK (Debug)
+## Build
+
+To create a debug APK from the project root:
 
 ```bash
 ./gradlew assembleDebug
 ```
 
-On Windows PowerShell:
+On Windows, use:
 
 ```powershell
-.\gradlew.bat assembleDebug
+gradlew.bat assembleDebug
 ```
 
-Generated APK path:
+## How To Use
 
-- `app/build/outputs/apk/debug/`
+1. Open a PDF file with Viewer from your file manager or another app.
+2. If the app asks to become the default PDF handler, allow it in system settings.
+3. Return to the app and confirm the default app flow if needed.
 
-## Notes
+## Project Notes
 
-- `local.properties` is ignored in git, so no local SDK path leaks.
-- Build output folders are not tracked.
-- Keep screenshots inside `assits/` so README links remain valid.
-
-## License
-
-Add your preferred license (for example MIT) before sharing publicly.
+- The screenshots used in this README are stored in the `assits/` folder so they stay versioned with the project.
+- The app is configured with `VIEW` intent filters for PDF files, so GitHub users can understand the app flow directly from this README and the source code.
